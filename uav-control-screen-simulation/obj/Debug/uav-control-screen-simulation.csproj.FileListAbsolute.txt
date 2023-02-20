@@ -1,0 +1,11 @@
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\bin\Debug\uav-control-screen-simulation.exe.config
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\bin\Debug\uav-control-screen-simulation.exe
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\bin\Debug\uav-control-screen-simulation.pdb
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.csproj.AssemblyReference.cache
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.csproj.SuggestedBindingRedirects.cache
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav_control_screen_simulation.FrmControlScreen.resources
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav_control_screen_simulation.Properties.Resources.resources
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.csproj.GenerateResource.cache
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.csproj.CoreCompileInputs.cache
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.exe
+C:\Users\ens_s\Desktop\Software\Projects\uav-control-screen-simulation\uav-control-screen-simulation\obj\Debug\uav-control-screen-simulation.pdb
