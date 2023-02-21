@@ -16,5 +16,10 @@ namespace uav_control_screen_simulation
         {
             InitializeComponent();
         }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

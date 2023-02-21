@@ -30,10 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlScreen));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,26 +67,13 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,6 +104,133 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manuel Control Panel";
             // 
+            // button10
+            // 
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Location = new System.Drawing.Point(126, 140);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(64, 32);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "-";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(196, 141);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(64, 32);
+            this.button11.TabIndex = 11;
+            this.button11.Text = "+";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 146);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 20);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Longitude :  ";
+            // 
+            // button8
+            // 
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(126, 102);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(64, 32);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "-";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(196, 103);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(64, 32);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "+";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(31, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 20);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Latitude :";
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(126, 65);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(64, 32);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "-";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(196, 66);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(64, 32);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "+";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(31, 71);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Altitude : ";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(9, 613);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(268, 32);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Flight";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(126, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 32);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(196, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(42, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Speed :";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.pictureBox1);
@@ -123,6 +253,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.checkBox4);
+            this.groupBox3.Controls.Add(this.checkBox3);
+            this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Location = new System.Drawing.Point(303, 496);
             this.groupBox3.Name = "groupBox3";
@@ -130,6 +263,16 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight Safety";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(48, 30);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 24);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Weather";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -140,7 +283,29 @@
             this.groupBox4.Size = new System.Drawing.Size(479, 173);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Control Panel";
+            this.groupBox4.Text = "Automatic Control Panel";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SeaGreen;
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(15, 25);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(146, 32);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "automatic take off";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.IndianRed;
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(167, 25);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(146, 32);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "automatic landing";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -299,63 +464,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Flight Indicators";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Speed :";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(196, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(126, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.Location = new System.Drawing.Point(9, 613);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 32);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Flight";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.IndianRed;
-            this.button4.Location = new System.Drawing.Point(6, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 32);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "automatic landing";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.IndianRed;
-            this.button5.Location = new System.Drawing.Point(158, 22);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 32);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "automatic take off";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(852, 54);
@@ -388,102 +496,42 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "latitude :";
             // 
-            // button6
+            // checkBox2
             // 
-            this.button6.Location = new System.Drawing.Point(126, 65);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(64, 32);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(142, 30);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(85, 24);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Runway";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // button7
+            // checkBox3
             // 
-            this.button7.Location = new System.Drawing.Point(196, 66);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 32);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(237, 30);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(114, 24);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "Field of view";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // checkBox4
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(31, 71);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Altitude : ";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(126, 102);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(64, 32);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(196, 103);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(64, 32);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "+";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(31, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 20);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Latitude :";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(126, 140);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(64, 32);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "-";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(196, 141);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(64, 32);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "+";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 146);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 20);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Longitude :  ";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Weather";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(357, 30);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(74, 24);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Safety";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1284, 681);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -491,7 +539,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.LightGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -556,6 +604,9 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }
 
