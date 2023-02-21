@@ -51,6 +51,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,14 +76,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -261,7 +267,7 @@
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Location = new System.Drawing.Point(303, 496);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(484, 173);
+            this.groupBox3.Size = new System.Drawing.Size(484, 82);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight Safety";
@@ -319,6 +325,28 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Automatic Control Panel";
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.IndianRed;
+            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Location = new System.Drawing.Point(167, 88);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(146, 58);
+            this.button13.TabIndex = 7;
+            this.button13.Text = "Remove Lndg. Runway";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.IndianRed;
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Location = new System.Drawing.Point(15, 88);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(146, 58);
+            this.button12.TabIndex = 6;
+            this.button12.Text = "Set Lndg. Runway";
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -551,27 +579,52 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "latitude :";
             // 
-            // button12
+            // groupBox6
             // 
-            this.button12.BackColor = System.Drawing.Color.IndianRed;
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(15, 88);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(146, 58);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Set Lndg. Runway";
-            this.button12.UseVisualStyleBackColor = false;
+            this.groupBox6.Controls.Add(this.textBox12);
+            this.groupBox6.Controls.Add(this.label16);
+            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Location = new System.Drawing.Point(303, 587);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(484, 82);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Coordinates";
             // 
-            // button13
+            // label15
             // 
-            this.button13.BackColor = System.Drawing.Color.IndianRed;
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(167, 88);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(146, 58);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "Remove Lndg. Runway";
-            this.button13.UseVisualStyleBackColor = false;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 32);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(24, 20);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "x :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(238, 31);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(24, 20);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "y :";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(31, 30);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(201, 26);
+            this.textBox11.TabIndex = 21;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(265, 29);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(198, 26);
+            this.textBox12.TabIndex = 23;
             // 
             // FrmControlScreen
             // 
@@ -579,6 +632,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1284, 681);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -603,6 +657,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -656,6 +712,11 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label15;
     }
 }
 
