@@ -21,5 +21,10 @@ namespace uav_control_screen_simulation
         {
 
         }
+
+        private void FrmControlScreen_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

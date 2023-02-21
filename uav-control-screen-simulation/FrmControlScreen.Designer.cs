@@ -46,6 +46,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -71,9 +74,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -264,6 +266,37 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight Safety";
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(357, 30);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(74, 24);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Safety";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(237, 30);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(114, 24);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "Field of view";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(142, 30);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(85, 24);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Runway";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -276,6 +309,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button13);
+            this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Location = new System.Drawing.Point(793, 496);
@@ -291,9 +326,9 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(15, 25);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 32);
+            this.button5.Size = new System.Drawing.Size(146, 57);
             this.button5.TabIndex = 5;
-            this.button5.Text = "automatic take off";
+            this.button5.Text = "Automatic Take Off";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -302,9 +337,9 @@
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(167, 25);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 32);
+            this.button4.Size = new System.Drawing.Size(146, 57);
             this.button4.TabIndex = 4;
-            this.button4.Text = "automatic landing";
+            this.button4.Text = "Automatic Landing";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
@@ -318,15 +353,19 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(98, 22);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(98, 57);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 3;
             // 
@@ -341,8 +380,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(284, 22);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 5;
             // 
@@ -357,24 +398,28 @@
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(284, 54);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(209, 57);
+            this.label4.Location = new System.Drawing.Point(229, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 6;
-            this.label4.Text = "altitude :";
+            this.label4.Text = "Fuel : ";
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(657, 54);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 15;
             // 
@@ -389,8 +434,10 @@
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(657, 22);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 26);
             this.textBox6.TabIndex = 13;
             // 
@@ -405,35 +452,39 @@
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(470, 54);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(100, 26);
             this.textBox7.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(395, 57);
+            this.label7.Location = new System.Drawing.Point(412, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 10;
-            this.label7.Text = "latitude :";
+            this.label7.Text = "Rpm :";
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(470, 22);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(100, 26);
             this.textBox8.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(395, 25);
+            this.label8.Location = new System.Drawing.Point(394, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 20);
             this.label8.TabIndex = 8;
-            this.label8.Text = "latitude :";
+            this.label8.Text = "altitude :";
             // 
             // groupBox5
             // 
@@ -466,8 +517,10 @@
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(852, 54);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(100, 26);
             this.textBox9.TabIndex = 19;
             // 
@@ -482,8 +535,10 @@
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(852, 22);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(100, 26);
             this.textBox10.TabIndex = 17;
             // 
@@ -496,36 +551,27 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "latitude :";
             // 
-            // checkBox2
+            // button12
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(142, 30);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(85, 24);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Runway";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.button12.BackColor = System.Drawing.Color.IndianRed;
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Location = new System.Drawing.Point(15, 88);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(146, 58);
+            this.button12.TabIndex = 6;
+            this.button12.Text = "Set Lndg. Runway";
+            this.button12.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // button13
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(237, 30);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(114, 24);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Field of view";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(357, 30);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(74, 24);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Safety";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.button13.BackColor = System.Drawing.Color.IndianRed;
+            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Location = new System.Drawing.Point(167, 88);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(146, 58);
+            this.button13.TabIndex = 7;
+            this.button13.Text = "Remove Lndg. Runway";
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // FrmControlScreen
             // 
@@ -547,6 +593,7 @@
             this.Name = "FrmControlScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Screen";
+            this.Load += new System.EventHandler(this.FrmControlScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -607,6 +654,8 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
     }
 }
 
