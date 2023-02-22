@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlScreen));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -87,6 +88,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.LblEngineYüzde = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -124,7 +128,7 @@
             this.groupBox8.Controls.Add(this.button6);
             this.groupBox8.Controls.Add(this.button9);
             this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Location = new System.Drawing.Point(9, 195);
+            this.groupBox8.Location = new System.Drawing.Point(9, 227);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(268, 188);
             this.groupBox8.TabIndex = 19;
@@ -249,13 +253,15 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.LblEngineYüzde);
+            this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.BtnEngineStart);
             this.groupBox7.Controls.Add(this.progressBar2);
             this.groupBox7.Controls.Add(this.progressBar1);
             this.groupBox7.Controls.Add(this.BtnEngineStop);
             this.groupBox7.Location = new System.Drawing.Point(9, 25);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(268, 164);
+            this.groupBox7.Size = new System.Drawing.Size(268, 196);
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Engine Control";
@@ -270,10 +276,11 @@
             this.BtnEngineStart.TabIndex = 13;
             this.BtnEngineStart.Text = "Engine Start";
             this.BtnEngineStart.UseVisualStyleBackColor = false;
+            this.BtnEngineStart.Click += new System.EventHandler(this.BtnEngineStart_Click);
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(6, 126);
+            this.progressBar2.Location = new System.Drawing.Point(6, 160);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(256, 23);
             this.progressBar2.TabIndex = 17;
@@ -289,7 +296,7 @@
             // 
             this.BtnEngineStop.BackColor = System.Drawing.Color.IndianRed;
             this.BtnEngineStop.ForeColor = System.Drawing.Color.Black;
-            this.BtnEngineStop.Location = new System.Drawing.Point(6, 90);
+            this.BtnEngineStop.Location = new System.Drawing.Point(6, 124);
             this.BtnEngineStop.Name = "BtnEngineStop";
             this.BtnEngineStop.Size = new System.Drawing.Size(256, 29);
             this.BtnEngineStop.TabIndex = 16;
@@ -694,6 +701,24 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "x :";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(79, 95);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(63, 20);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Engine:";
+            // 
+            // LblEngineYüzde
+            // 
+            this.LblEngineYüzde.AutoSize = true;
+            this.LblEngineYüzde.Location = new System.Drawing.Point(148, 95);
+            this.LblEngineYüzde.Name = "LblEngineYüzde";
+            this.LblEngineYüzde.Size = new System.Drawing.Size(32, 20);
+            this.LblEngineYüzde.TabIndex = 19;
+            this.LblEngineYüzde.Text = "%0";
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -720,6 +745,7 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -793,6 +819,9 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label LblEngineYüzde;
+        private System.Windows.Forms.Label label17;
     }
 }
 

@@ -26,5 +26,39 @@ namespace uav_control_screen_simulation
         {
             
         }
+
+        private void BtnEngineStart_Click(object sender, EventArgs e)
+        {
+            // ProgressBar'ın maximum değerini belirleyin
+            progressBar1.Maximum = 100;
+
+            // ProgressBar'ın minimum değerini belirleyin
+            progressBar1.Minimum = 0;
+
+            // ProgressBar'ı sıfırlayın
+            progressBar1.Value = 0;
+
+            // Timer'ı oluşturun ve Interval değerini ayarlayın
+            Timer timer = new Timer();
+            timer.Interval = 100;
+
+            // Timer'ın Tick olayını ayarlayın
+            timer.Tick += (s, ev) =>
+            {
+                // ProgressBar'ın değerini artırın
+                progressBar1.Value++;
+
+                // ProgressBar'ın maksimum değerine ulaştığında timer'ı durdurun
+                if (progressBar1.Value == progressBar1.Maximum)
+                {
+                    timer.Stop();
+                    LblEngineYüzde.Text = "%100";
+                }
+            };
+
+            // Timer'ı başlatın
+            timer.Start();
+            
+        }
     }
 }
