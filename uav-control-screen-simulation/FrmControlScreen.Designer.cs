@@ -30,20 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlScreen));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnEngineStart = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.BtnFlight = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.BtnEngineStart = new System.Windows.Forms.Button();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.BtnEngineStop = new System.Windows.Forms.Button();
+            this.BtnFlight = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -82,20 +87,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.BtnEngineStop = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -110,16 +110,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manuel Control Panel";
             // 
-            // BtnEngineStart
+            // groupBox8
             // 
-            this.BtnEngineStart.BackColor = System.Drawing.Color.SeaGreen;
-            this.BtnEngineStart.ForeColor = System.Drawing.Color.Black;
-            this.BtnEngineStart.Location = new System.Drawing.Point(6, 25);
-            this.BtnEngineStart.Name = "BtnEngineStart";
-            this.BtnEngineStart.Size = new System.Drawing.Size(256, 29);
-            this.BtnEngineStart.TabIndex = 13;
-            this.BtnEngineStart.Text = "Engine Start";
-            this.BtnEngineStart.UseVisualStyleBackColor = false;
+            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.label9);
+            this.groupBox8.Controls.Add(this.button10);
+            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.button11);
+            this.groupBox8.Controls.Add(this.label14);
+            this.groupBox8.Controls.Add(this.label12);
+            this.groupBox8.Controls.Add(this.button7);
+            this.groupBox8.Controls.Add(this.button8);
+            this.groupBox8.Controls.Add(this.button6);
+            this.groupBox8.Controls.Add(this.button9);
+            this.groupBox8.Controls.Add(this.label13);
+            this.groupBox8.Location = new System.Drawing.Point(9, 195);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(268, 188);
+            this.groupBox8.TabIndex = 19;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Flight Control";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(186, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(32, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Speed :";
             // 
             // button10
             // 
@@ -130,6 +159,16 @@
             this.button10.TabIndex = 12;
             this.button10.Text = "-";
             this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(116, 24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 32);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -150,6 +189,25 @@
             this.label14.TabIndex = 10;
             this.label14.Text = "Longitude :  ";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 68);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Altitude : ";
+            // 
+            // button7
+            // 
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(186, 63);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(64, 32);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "+";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // button8
             // 
             this.button8.ForeColor = System.Drawing.Color.Black;
@@ -159,6 +217,16 @@
             this.button8.TabIndex = 9;
             this.button8.Text = "-";
             this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(116, 62);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(64, 32);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "-";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -179,34 +247,54 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "Latitude :";
             // 
-            // button6
+            // groupBox7
             // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(116, 62);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(64, 32);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.groupBox7.Controls.Add(this.BtnEngineStart);
+            this.groupBox7.Controls.Add(this.progressBar2);
+            this.groupBox7.Controls.Add(this.progressBar1);
+            this.groupBox7.Controls.Add(this.BtnEngineStop);
+            this.groupBox7.Location = new System.Drawing.Point(9, 25);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(268, 164);
+            this.groupBox7.TabIndex = 18;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Engine Control";
             // 
-            // button7
+            // BtnEngineStart
             // 
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(186, 63);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 32);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnEngineStart.BackColor = System.Drawing.Color.SeaGreen;
+            this.BtnEngineStart.ForeColor = System.Drawing.Color.Black;
+            this.BtnEngineStart.Location = new System.Drawing.Point(6, 25);
+            this.BtnEngineStart.Name = "BtnEngineStart";
+            this.BtnEngineStart.Size = new System.Drawing.Size(256, 29);
+            this.BtnEngineStart.TabIndex = 13;
+            this.BtnEngineStart.Text = "Engine Start";
+            this.BtnEngineStart.UseVisualStyleBackColor = false;
             // 
-            // label12
+            // progressBar2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 68);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Altitude : ";
+            this.progressBar2.Location = new System.Drawing.Point(6, 126);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(256, 23);
+            this.progressBar2.TabIndex = 17;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 61);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(256, 23);
+            this.progressBar1.TabIndex = 15;
+            // 
+            // BtnEngineStop
+            // 
+            this.BtnEngineStop.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnEngineStop.ForeColor = System.Drawing.Color.Black;
+            this.BtnEngineStop.Location = new System.Drawing.Point(6, 90);
+            this.BtnEngineStop.Name = "BtnEngineStop";
+            this.BtnEngineStop.Size = new System.Drawing.Size(256, 29);
+            this.BtnEngineStop.TabIndex = 16;
+            this.BtnEngineStop.Text = "Engine Stop";
+            this.BtnEngineStop.UseVisualStyleBackColor = false;
             // 
             // BtnFlight
             // 
@@ -218,35 +306,6 @@
             this.BtnFlight.TabIndex = 3;
             this.BtnFlight.Text = "Flight";
             this.BtnFlight.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(116, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(186, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Speed :";
             // 
             // groupBox2
             // 
@@ -481,11 +540,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(582, 25);
+            this.label6.Location = new System.Drawing.Point(597, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 12;
-            this.label6.Text = "latitude :";
+            this.label6.Text = "Time :";
             // 
             // textBox7
             // 
@@ -635,65 +694,6 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "x :";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 61);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(256, 23);
-            this.progressBar1.TabIndex = 15;
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(6, 126);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(256, 23);
-            this.progressBar2.TabIndex = 17;
-            // 
-            // BtnEngineStop
-            // 
-            this.BtnEngineStop.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnEngineStop.ForeColor = System.Drawing.Color.Black;
-            this.BtnEngineStop.Location = new System.Drawing.Point(6, 90);
-            this.BtnEngineStop.Name = "BtnEngineStop";
-            this.BtnEngineStop.Size = new System.Drawing.Size(256, 29);
-            this.BtnEngineStop.TabIndex = 16;
-            this.BtnEngineStop.Text = "Engine Stop";
-            this.BtnEngineStop.UseVisualStyleBackColor = false;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.BtnEngineStart);
-            this.groupBox7.Controls.Add(this.progressBar2);
-            this.groupBox7.Controls.Add(this.progressBar1);
-            this.groupBox7.Controls.Add(this.BtnEngineStop);
-            this.groupBox7.Location = new System.Drawing.Point(9, 25);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(268, 164);
-            this.groupBox7.TabIndex = 18;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Engine Control";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.button1);
-            this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.button10);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.button11);
-            this.groupBox8.Controls.Add(this.label14);
-            this.groupBox8.Controls.Add(this.label12);
-            this.groupBox8.Controls.Add(this.button7);
-            this.groupBox8.Controls.Add(this.button8);
-            this.groupBox8.Controls.Add(this.button6);
-            this.groupBox8.Controls.Add(this.button9);
-            this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Location = new System.Drawing.Point(9, 195);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(268, 188);
-            this.groupBox8.TabIndex = 19;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Engine Control";
-            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -717,6 +717,9 @@
             this.Text = "Control Screen";
             this.Load += new System.EventHandler(this.FrmControlScreen_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -726,9 +729,6 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
