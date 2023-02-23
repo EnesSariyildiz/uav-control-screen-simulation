@@ -60,5 +60,10 @@ namespace uav_control_screen_simulation
             timer.Start();
             
         }
+
+        private void BtnEngineStop_Click(object sender, EventArgs e)
+        {
+            TxtEngineStop.Text = "Engine is stoped!"; 
+        }
     }
 }
