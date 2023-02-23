@@ -75,7 +75,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TxtRpm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -91,6 +91,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TxtEngineStop = new System.Windows.Forms.TextBox();
+            this.LblSayacGizli = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LblSayacGizli);
             this.groupBox1.Controls.Add(this.groupBox8);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.BtnFlight);
@@ -325,6 +327,7 @@
             this.BtnFlight.TabIndex = 3;
             this.BtnFlight.Text = "Flight";
             this.BtnFlight.UseVisualStyleBackColor = false;
+            this.BtnFlight.Click += new System.EventHandler(this.BtnFlight_Click);
             // 
             // groupBox2
             // 
@@ -565,14 +568,14 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Time :";
             // 
-            // textBox7
+            // TxtRpm
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(470, 54);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 26);
-            this.textBox7.TabIndex = 11;
+            this.TxtRpm.Enabled = false;
+            this.TxtRpm.Location = new System.Drawing.Point(470, 54);
+            this.TxtRpm.Name = "TxtRpm";
+            this.TxtRpm.ReadOnly = true;
+            this.TxtRpm.Size = new System.Drawing.Size(100, 26);
+            this.TxtRpm.TabIndex = 11;
             // 
             // label7
             // 
@@ -615,7 +618,7 @@
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.textBox7);
+            this.groupBox5.Controls.Add(this.TxtRpm);
             this.groupBox5.Controls.Add(this.textBox3);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label3);
@@ -722,6 +725,15 @@
             this.TxtEngineStop.TabIndex = 20;
             this.TxtEngineStop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // LblSayacGizli
+            // 
+            this.LblSayacGizli.AutoSize = true;
+            this.LblSayacGizli.Location = new System.Drawing.Point(20, 463);
+            this.LblSayacGizli.Name = "LblSayacGizli";
+            this.LblSayacGizli.Size = new System.Drawing.Size(54, 20);
+            this.LblSayacGizli.TabIndex = 20;
+            this.LblSayacGizli.Text = "sayac ";
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -745,6 +757,7 @@
             this.Text = "Control Screen";
             this.Load += new System.EventHandler(this.FrmControlScreen_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -773,7 +786,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TxtRpm;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
@@ -825,6 +838,7 @@
         private System.Windows.Forms.Label LblEngineYüzde;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TxtEngineStop;
+        private System.Windows.Forms.Label LblSayacGizli;
     }
 }
 

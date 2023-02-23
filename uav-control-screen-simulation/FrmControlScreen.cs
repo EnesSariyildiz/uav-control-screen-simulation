@@ -24,31 +24,30 @@ namespace uav_control_screen_simulation
 
         private void FrmControlScreen_Load(object sender, EventArgs e)
         {
-            
-        }
 
+        }
+        int sayac;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
             
+
             progressBar1.Maximum = 100;
 
-            
             progressBar1.Minimum = 0;
 
-            
             progressBar1.Value = 0;
 
-            
+
             Timer timer = new Timer();
             timer.Interval = 100;
 
-           
+
             timer.Tick += (s, ev) =>
             {
-                
+
                 progressBar1.Value++;
 
-               
+
                 if (progressBar1.Value == progressBar1.Maximum)
                 {
                     timer.Stop();
@@ -56,9 +55,9 @@ namespace uav_control_screen_simulation
                 }
             };
 
-            
+
             timer.Start();
-            
+
         }
 
         private void BtnEngineStop_Click(object sender, EventArgs e)
@@ -68,16 +67,22 @@ namespace uav_control_screen_simulation
 
             if (result == DialogResult.Yes)
             {
-                
+
                 TxtEngineStop.Text = "Engine is stoped!";
+                progressBar1.Value = 0;
             }
             else if (result == DialogResult.No)
             {
-                
+
                 TxtEngineStop.Text = "Engine is not stoped!";
             }
 
-            
+
+        }
+
+        private void BtnFlight_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Take off beggins");
         }
     }
 }
