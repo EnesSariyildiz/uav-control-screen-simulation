@@ -26,10 +26,11 @@ namespace uav_control_screen_simulation
         {
 
         }
-        int count, engineCount, flightTimeCount;
+        int count, engineCount, flightTimeCount,fuelCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
 
+            timer4.Start();
 
             progressBar1.Maximum = 100;
 
@@ -107,10 +108,33 @@ namespace uav_control_screen_simulation
 
         private void ChkWeather_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+        int speedPlusCount;
+        private void BtnSpeedPlus_Click(object sender, EventArgs e)
+        {
             
+            speedPlusCount += 2;
+            TxtSpeed.Text = speedPlusCount.ToString()+" "+"knot";
         }
 
+        private void BtnSpeedMinus_Click(object sender, EventArgs e)
+        {
+            speedPlusCount -= 5;
+            TxtSpeed.Text = speedPlusCount.ToString();
+        }
 
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            fuelCount = 100;
+            fuelCount--;
+            if (fuelCount==0)
+            {
+                timer4.Stop();
+            }
+            //fuelCount--;
+            TxtFuel.Text = fuelCount.ToString();
+        }
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
@@ -135,7 +159,7 @@ namespace uav_control_screen_simulation
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            
+
             flightTimeCount++;
             TxtFlightTime.Text = flightTimeCount.ToString();
         }

@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlScreen));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnSpeedPlus = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnSpeedMinus = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.BtnConfirm = new System.Windows.Forms.Button();
             this.ChkSafety = new System.Windows.Forms.CheckBox();
             this.ChkFieldOfView = new System.Windows.Forms.CheckBox();
             this.ChkRunway = new System.Windows.Forms.CheckBox();
@@ -66,9 +67,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtSpeed = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtFuel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtFlightTime = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -90,7 +91,7 @@
             this.TxtEngineLeft = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.BtnConfirm = new System.Windows.Forms.Button();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -117,10 +118,10 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.BtnSpeedPlus);
             this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Controls.Add(this.button10);
-            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.BtnSpeedMinus);
             this.groupBox8.Controls.Add(this.button11);
             this.groupBox8.Controls.Add(this.label14);
             this.groupBox8.Controls.Add(this.label12);
@@ -136,15 +137,16 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Flight Control";
             // 
-            // button1
+            // BtnSpeedPlus
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(186, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSpeedPlus.ForeColor = System.Drawing.Color.Black;
+            this.BtnSpeedPlus.Location = new System.Drawing.Point(186, 25);
+            this.BtnSpeedPlus.Name = "BtnSpeedPlus";
+            this.BtnSpeedPlus.Size = new System.Drawing.Size(64, 32);
+            this.BtnSpeedPlus.TabIndex = 1;
+            this.BtnSpeedPlus.Text = "+";
+            this.BtnSpeedPlus.UseVisualStyleBackColor = true;
+            this.BtnSpeedPlus.Click += new System.EventHandler(this.BtnSpeedPlus_Click);
             // 
             // label9
             // 
@@ -165,15 +167,16 @@
             this.button10.Text = "-";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnSpeedMinus
             // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(116, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnSpeedMinus.ForeColor = System.Drawing.Color.Black;
+            this.BtnSpeedMinus.Location = new System.Drawing.Point(116, 24);
+            this.BtnSpeedMinus.Name = "BtnSpeedMinus";
+            this.BtnSpeedMinus.Size = new System.Drawing.Size(64, 32);
+            this.BtnSpeedMinus.TabIndex = 2;
+            this.BtnSpeedMinus.Text = "-";
+            this.BtnSpeedMinus.UseVisualStyleBackColor = true;
+            this.BtnSpeedMinus.Click += new System.EventHandler(this.BtnSpeedMinus_Click);
             // 
             // button11
             // 
@@ -371,6 +374,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight Safety";
             // 
+            // BtnConfirm
+            // 
+            this.BtnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.BtnConfirm.Location = new System.Drawing.Point(50, 47);
+            this.BtnConfirm.Name = "BtnConfirm";
+            this.BtnConfirm.Size = new System.Drawing.Size(383, 28);
+            this.BtnConfirm.TabIndex = 4;
+            this.BtnConfirm.Text = "Confirm";
+            this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
+            // 
             // ChkSafety
             // 
             this.ChkSafety.AutoSize = true;
@@ -482,14 +496,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "longitude :";
             // 
-            // textBox3
+            // TxtSpeed
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(284, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 5;
+            this.TxtSpeed.Enabled = false;
+            this.TxtSpeed.Location = new System.Drawing.Point(284, 22);
+            this.TxtSpeed.Name = "TxtSpeed";
+            this.TxtSpeed.ReadOnly = true;
+            this.TxtSpeed.Size = new System.Drawing.Size(100, 26);
+            this.TxtSpeed.TabIndex = 5;
             // 
             // label3
             // 
@@ -500,14 +514,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "speed :";
             // 
-            // textBox4
+            // TxtFuel
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(284, 54);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 7;
+            this.TxtFuel.Enabled = false;
+            this.TxtFuel.Location = new System.Drawing.Point(284, 54);
+            this.TxtFuel.Name = "TxtFuel";
+            this.TxtFuel.ReadOnly = true;
+            this.TxtFuel.Size = new System.Drawing.Size(100, 26);
+            this.TxtFuel.TabIndex = 7;
             // 
             // label4
             // 
@@ -581,13 +595,13 @@
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.TxtRpm);
-            this.groupBox5.Controls.Add(this.textBox3);
+            this.groupBox5.Controls.Add(this.TxtSpeed);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.textBox8);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.TxtFuel);
             this.groupBox5.Location = new System.Drawing.Point(303, 387);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(969, 103);
@@ -706,16 +720,9 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // BtnConfirm
+            // timer4
             // 
-            this.BtnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.BtnConfirm.Location = new System.Drawing.Point(50, 47);
-            this.BtnConfirm.Name = "BtnConfirm";
-            this.BtnConfirm.Size = new System.Drawing.Size(383, 28);
-            this.BtnConfirm.TabIndex = 4;
-            this.BtnConfirm.Text = "Confirm";
-            this.BtnConfirm.UseVisualStyleBackColor = true;
-            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // FrmControlScreen
             // 
@@ -773,9 +780,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtFuel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtSpeed;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
@@ -783,8 +790,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button BtnFlight;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSpeedMinus;
+        private System.Windows.Forms.Button BtnSpeedPlus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnAutomaticTake;
         private System.Windows.Forms.Button BtnAutomaticLanding;
@@ -823,6 +830,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button BtnConfirm;
+        private System.Windows.Forms.Timer timer4;
     }
 }
 
