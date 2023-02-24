@@ -70,8 +70,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.TxtFlightTime = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtRpm = new System.Windows.Forms.TextBox();
@@ -79,10 +77,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -96,6 +90,7 @@
             this.TxtEngineLeft = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.BtnConfirm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -364,6 +359,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.BtnConfirm);
             this.groupBox3.Controls.Add(this.ChkSafety);
             this.groupBox3.Controls.Add(this.ChkFieldOfView);
             this.groupBox3.Controls.Add(this.ChkRunway);
@@ -378,7 +374,7 @@
             // ChkSafety
             // 
             this.ChkSafety.AutoSize = true;
-            this.ChkSafety.Location = new System.Drawing.Point(357, 30);
+            this.ChkSafety.Location = new System.Drawing.Point(359, 20);
             this.ChkSafety.Name = "ChkSafety";
             this.ChkSafety.Size = new System.Drawing.Size(74, 24);
             this.ChkSafety.TabIndex = 3;
@@ -388,7 +384,7 @@
             // ChkFieldOfView
             // 
             this.ChkFieldOfView.AutoSize = true;
-            this.ChkFieldOfView.Location = new System.Drawing.Point(237, 30);
+            this.ChkFieldOfView.Location = new System.Drawing.Point(239, 20);
             this.ChkFieldOfView.Name = "ChkFieldOfView";
             this.ChkFieldOfView.Size = new System.Drawing.Size(114, 24);
             this.ChkFieldOfView.TabIndex = 2;
@@ -398,7 +394,7 @@
             // ChkRunway
             // 
             this.ChkRunway.AutoSize = true;
-            this.ChkRunway.Location = new System.Drawing.Point(142, 30);
+            this.ChkRunway.Location = new System.Drawing.Point(144, 20);
             this.ChkRunway.Name = "ChkRunway";
             this.ChkRunway.Size = new System.Drawing.Size(85, 24);
             this.ChkRunway.TabIndex = 1;
@@ -409,12 +405,13 @@
             // ChkWeather
             // 
             this.ChkWeather.AutoSize = true;
-            this.ChkWeather.Location = new System.Drawing.Point(48, 30);
+            this.ChkWeather.Location = new System.Drawing.Point(50, 20);
             this.ChkWeather.Name = "ChkWeather";
             this.ChkWeather.Size = new System.Drawing.Size(89, 24);
             this.ChkWeather.TabIndex = 0;
             this.ChkWeather.Text = "Weather";
             this.ChkWeather.UseVisualStyleBackColor = true;
+            this.ChkWeather.CheckedChanged += new System.EventHandler(this.ChkWeather_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -521,24 +518,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Fuel : ";
             // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(657, 54);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(582, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "latitude :";
-            // 
             // TxtFlightTime
             // 
             this.TxtFlightTime.Enabled = false;
@@ -595,13 +574,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox9);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.textBox10);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.TxtFlightTime);
             this.groupBox5.Controls.Add(this.label6);
@@ -621,42 +594,6 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Flight Indicators";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(852, 54);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 26);
-            this.textBox9.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(777, 57);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "latitude :";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(852, 22);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 26);
-            this.textBox10.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(777, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 20);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "latitude :";
             // 
             // groupBox6
             // 
@@ -769,6 +706,17 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // BtnConfirm
+            // 
+            this.BtnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.BtnConfirm.Location = new System.Drawing.Point(50, 47);
+            this.BtnConfirm.Name = "BtnConfirm";
+            this.BtnConfirm.Size = new System.Drawing.Size(383, 28);
+            this.BtnConfirm.TabIndex = 4;
+            this.BtnConfirm.Text = "Confirm";
+            this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -819,8 +767,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtFlightTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtRpm;
@@ -851,10 +797,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox ChkWeather;
         private System.Windows.Forms.CheckBox ChkFieldOfView;
         private System.Windows.Forms.CheckBox ChkRunway;
@@ -880,6 +822,7 @@
         private System.Windows.Forms.TextBox TxtEngineLeft;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button BtnConfirm;
     }
 }
 

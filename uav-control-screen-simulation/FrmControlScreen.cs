@@ -83,6 +83,7 @@ namespace uav_control_screen_simulation
 
         private void BtnFlight_Click(object sender, EventArgs e)
         {
+
             //MessageBox.Show("Take off beggins");
             timer3.Start();
         }
@@ -103,7 +104,35 @@ namespace uav_control_screen_simulation
                 timer2.Stop();
             }
         }
-        int saniye, dakika, saat;
+
+        private void ChkWeather_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+        private void BtnConfirm_Click(object sender, EventArgs e)
+        {
+            if (ChkFieldOfView.Checked && ChkRunway.Checked && ChkSafety.Checked && ChkWeather.Checked)
+            {
+                ChkWeather.ForeColor = Color.LightGray;
+                ChkSafety.ForeColor = Color.LightGray;
+                ChkRunway.ForeColor = Color.LightGray;
+                ChkFieldOfView.ForeColor = Color.LightGray;
+                MessageBox.Show("Security steps are complete !");
+            }
+            else
+            {
+                ChkWeather.ForeColor = Color.Red;
+                ChkSafety.ForeColor = Color.Red;
+                ChkRunway.ForeColor = Color.Red;
+                ChkFieldOfView.ForeColor = Color.Red;
+                MessageBox.Show("Please do the security steps !");
+            }
+
+        }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             
