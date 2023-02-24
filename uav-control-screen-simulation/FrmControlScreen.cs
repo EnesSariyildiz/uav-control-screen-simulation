@@ -26,10 +26,10 @@ namespace uav_control_screen_simulation
         {
 
         }
-        int sayac;
+        int count, engineCount, flightTimeCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
-            
+
 
             progressBar1.Maximum = 100;
 
@@ -39,6 +39,7 @@ namespace uav_control_screen_simulation
 
 
             Timer timer = new Timer();
+
             timer.Interval = 100;
 
 
@@ -54,14 +55,14 @@ namespace uav_control_screen_simulation
                     LblEngineYüzde.Text = "%100";
                 }
             };
-
-
             timer.Start();
+            timer2.Start();
 
         }
 
         private void BtnEngineStop_Click(object sender, EventArgs e)
         {
+            progressBar1.Value = 0;
 
             DialogResult result = MessageBox.Show("Stop the engine?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -82,7 +83,32 @@ namespace uav_control_screen_simulation
 
         private void BtnFlight_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Take off beggins");
+            //MessageBox.Show("Take off beggins");
+            timer3.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            count++;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            engineCount++;
+            TxtEngineLeft.Text = "%" + engineCount.ToString();
+            TxtEngineRight.Text = "%" + engineCount.ToString();
+
+            if (engineCount == 100)
+            {
+                timer2.Stop();
+            }
+        }
+        int saniye, dakika, saat;
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            
+            flightTimeCount++;
+            TxtFlightTime.Text = flightTimeCount.ToString();
         }
     }
 }

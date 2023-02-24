@@ -45,6 +45,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.TxtEngineStop = new System.Windows.Forms.TextBox();
             this.LblEngineYüzde = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.BtnEngineStart = new System.Windows.Forms.Button();
@@ -59,8 +60,6 @@
             this.ChkRunway = new System.Windows.Forms.CheckBox();
             this.ChkWeather = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.BtnAutomaticTake = new System.Windows.Forms.Button();
             this.BtnAutomaticLanding = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,7 +72,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TxtFlightTime = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtRpm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -90,8 +89,13 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.TxtEngineStop = new System.Windows.Forms.TextBox();
-            this.LblSayacGizli = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.TxtEngineRight = new System.Windows.Forms.TextBox();
+            this.TxtEngineLeft = new System.Windows.Forms.TextBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -101,11 +105,11 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.LblSayacGizli);
             this.groupBox1.Controls.Add(this.groupBox8);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.BtnFlight);
@@ -268,6 +272,15 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Engine Control";
             // 
+            // TxtEngineStop
+            // 
+            this.TxtEngineStop.Enabled = false;
+            this.TxtEngineStop.Location = new System.Drawing.Point(7, 160);
+            this.TxtEngineStop.Name = "TxtEngineStop";
+            this.TxtEngineStop.Size = new System.Drawing.Size(255, 26);
+            this.TxtEngineStop.TabIndex = 20;
+            this.TxtEngineStop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // LblEngineYüzde
             // 
             this.LblEngineYüzde.AutoSize = true;
@@ -357,7 +370,7 @@
             this.groupBox3.Controls.Add(this.ChkWeather);
             this.groupBox3.Location = new System.Drawing.Point(303, 496);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(484, 82);
+            this.groupBox3.Size = new System.Drawing.Size(484, 85);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight Safety";
@@ -405,46 +418,22 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button13);
-            this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Controls.Add(this.BtnAutomaticTake);
             this.groupBox4.Controls.Add(this.BtnAutomaticLanding);
             this.groupBox4.Location = new System.Drawing.Point(793, 496);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(479, 173);
+            this.groupBox4.Size = new System.Drawing.Size(479, 85);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Automatic Control Panel";
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.IndianRed;
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(167, 88);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(146, 58);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "Remove Lndg. Runway";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.IndianRed;
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(15, 88);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(146, 58);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Set Lndg. Runway";
-            this.button12.UseVisualStyleBackColor = false;
             // 
             // BtnAutomaticTake
             // 
             this.BtnAutomaticTake.BackColor = System.Drawing.Color.SeaGreen;
             this.BtnAutomaticTake.ForeColor = System.Drawing.Color.Black;
-            this.BtnAutomaticTake.Location = new System.Drawing.Point(15, 25);
+            this.BtnAutomaticTake.Location = new System.Drawing.Point(15, 20);
             this.BtnAutomaticTake.Name = "BtnAutomaticTake";
-            this.BtnAutomaticTake.Size = new System.Drawing.Size(146, 57);
+            this.BtnAutomaticTake.Size = new System.Drawing.Size(223, 57);
             this.BtnAutomaticTake.TabIndex = 5;
             this.BtnAutomaticTake.Text = "Automatic Take Off";
             this.BtnAutomaticTake.UseVisualStyleBackColor = false;
@@ -453,9 +442,9 @@
             // 
             this.BtnAutomaticLanding.BackColor = System.Drawing.Color.IndianRed;
             this.BtnAutomaticLanding.ForeColor = System.Drawing.Color.Black;
-            this.BtnAutomaticLanding.Location = new System.Drawing.Point(167, 25);
+            this.BtnAutomaticLanding.Location = new System.Drawing.Point(250, 20);
             this.BtnAutomaticLanding.Name = "BtnAutomaticLanding";
-            this.BtnAutomaticLanding.Size = new System.Drawing.Size(146, 57);
+            this.BtnAutomaticLanding.Size = new System.Drawing.Size(223, 57);
             this.BtnAutomaticLanding.TabIndex = 4;
             this.BtnAutomaticLanding.Text = "Automatic Landing";
             this.BtnAutomaticLanding.UseVisualStyleBackColor = false;
@@ -550,14 +539,14 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "latitude :";
             // 
-            // textBox6
+            // TxtFlightTime
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(657, 22);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 13;
+            this.TxtFlightTime.Enabled = false;
+            this.TxtFlightTime.Location = new System.Drawing.Point(657, 22);
+            this.TxtFlightTime.Name = "TxtFlightTime";
+            this.TxtFlightTime.ReadOnly = true;
+            this.TxtFlightTime.Size = new System.Drawing.Size(100, 26);
+            this.TxtFlightTime.TabIndex = 13;
             // 
             // label6
             // 
@@ -614,7 +603,7 @@
             this.groupBox5.Controls.Add(this.textBox1);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.textBox6);
+            this.groupBox5.Controls.Add(this.TxtFlightTime);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Controls.Add(this.label2);
@@ -716,23 +705,69 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "x :";
             // 
-            // TxtEngineStop
+            // timer1
             // 
-            this.TxtEngineStop.Enabled = false;
-            this.TxtEngineStop.Location = new System.Drawing.Point(7, 160);
-            this.TxtEngineStop.Name = "TxtEngineStop";
-            this.TxtEngineStop.Size = new System.Drawing.Size(255, 26);
-            this.TxtEngineStop.TabIndex = 20;
-            this.TxtEngineStop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // LblSayacGizli
+            // groupBox9
             // 
-            this.LblSayacGizli.AutoSize = true;
-            this.LblSayacGizli.Location = new System.Drawing.Point(20, 463);
-            this.LblSayacGizli.Name = "LblSayacGizli";
-            this.LblSayacGizli.Size = new System.Drawing.Size(54, 20);
-            this.LblSayacGizli.TabIndex = 20;
-            this.LblSayacGizli.Text = "sayac ";
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Controls.Add(this.label18);
+            this.groupBox9.Controls.Add(this.TxtEngineRight);
+            this.groupBox9.Controls.Add(this.TxtEngineLeft);
+            this.groupBox9.Location = new System.Drawing.Point(793, 584);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(479, 85);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Engine 1-2";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(309, 26);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 20);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Right";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(107, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 20);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Left";
+            // 
+            // TxtEngineRight
+            // 
+            this.TxtEngineRight.Enabled = false;
+            this.TxtEngineRight.ForeColor = System.Drawing.Color.IndianRed;
+            this.TxtEngineRight.Location = new System.Drawing.Point(274, 48);
+            this.TxtEngineRight.Name = "TxtEngineRight";
+            this.TxtEngineRight.Size = new System.Drawing.Size(127, 26);
+            this.TxtEngineRight.TabIndex = 1;
+            this.TxtEngineRight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtEngineLeft
+            // 
+            this.TxtEngineLeft.Enabled = false;
+            this.TxtEngineLeft.ForeColor = System.Drawing.Color.IndianRed;
+            this.TxtEngineLeft.Location = new System.Drawing.Point(66, 49);
+            this.TxtEngineLeft.Name = "TxtEngineLeft";
+            this.TxtEngineLeft.Size = new System.Drawing.Size(127, 26);
+            this.TxtEngineLeft.TabIndex = 0;
+            this.TxtEngineLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // FrmControlScreen
             // 
@@ -740,6 +775,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1284, 681);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -757,7 +793,6 @@
             this.Text = "Control Screen";
             this.Load += new System.EventHandler(this.FrmControlScreen_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -771,6 +806,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -784,7 +821,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TxtFlightTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtRpm;
         private System.Windows.Forms.Label label7;
@@ -822,8 +859,6 @@
         private System.Windows.Forms.CheckBox ChkFieldOfView;
         private System.Windows.Forms.CheckBox ChkRunway;
         private System.Windows.Forms.CheckBox ChkSafety;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label16;
@@ -838,7 +873,13 @@
         private System.Windows.Forms.Label LblEngineYüzde;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TxtEngineStop;
-        private System.Windows.Forms.Label LblSayacGizli;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox TxtEngineRight;
+        private System.Windows.Forms.TextBox TxtEngineLeft;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 
