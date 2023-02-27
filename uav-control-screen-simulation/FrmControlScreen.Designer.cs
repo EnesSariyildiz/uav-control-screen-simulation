@@ -92,6 +92,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -540,6 +541,7 @@
             this.TxtFlightTime.ReadOnly = true;
             this.TxtFlightTime.Size = new System.Drawing.Size(100, 26);
             this.TxtFlightTime.TabIndex = 13;
+            this.TxtFlightTime.TextChanged += new System.EventHandler(this.TxtFlightTime_TextChanged);
             // 
             // label6
             // 
@@ -724,6 +726,10 @@
             // 
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // TimerFlightTime
+            // 
+            this.TimerFlightTime.Tick += new System.EventHandler(this.TimerFlightTime_Tick);
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -745,7 +751,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmControlScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Control Screen";
+            this.Text = "UAV Control Screen";
             this.Load += new System.EventHandler(this.FrmControlScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -831,6 +837,7 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Timer TimerFlightTime;
     }
 }
 

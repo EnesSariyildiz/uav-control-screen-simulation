@@ -26,7 +26,7 @@ namespace uav_control_screen_simulation
         {
 
         }
-        int count, engineCount, flightTimeCount,fuelCount;
+        int count, engineCount, fuelCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
 
@@ -81,11 +81,13 @@ namespace uav_control_screen_simulation
 
 
         }
-
+        int flightTimeCount;
         private void BtnFlight_Click(object sender, EventArgs e)
         {
 
-            //MessageBox.Show("Take off beggins");
+            MessageBox.Show("Take off beggins");
+            flightTimeCount++;
+            TxtFlightTime.Text = flightTimeCount.ToString();
             timer3.Start();
         }
 
@@ -113,22 +115,32 @@ namespace uav_control_screen_simulation
         int speedPlusCount;
         private void BtnSpeedPlus_Click(object sender, EventArgs e)
         {
-            
+
             speedPlusCount += 2;
-            TxtSpeed.Text = speedPlusCount.ToString()+" "+"knot";
+            TxtSpeed.Text = speedPlusCount.ToString() + " " + "knot";
         }
 
         private void BtnSpeedMinus_Click(object sender, EventArgs e)
         {
-            speedPlusCount -= 5;
+            speedPlusCount -= 2;
             TxtSpeed.Text = speedPlusCount.ToString();
+        }
+
+        private void TxtFlightTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimerFlightTime_Tick(object sender, EventArgs e)
+        {
+            TimerFlightTime.Start();
         }
 
         private void timer4_Tick(object sender, EventArgs e)
         {
             fuelCount = 100;
             fuelCount--;
-            if (fuelCount==0)
+            if (fuelCount == 0)
             {
                 timer4.Stop();
             }
@@ -140,10 +152,10 @@ namespace uav_control_screen_simulation
         {
             if (ChkFieldOfView.Checked && ChkRunway.Checked && ChkSafety.Checked && ChkWeather.Checked)
             {
-                ChkWeather.ForeColor = Color.LightGray;
-                ChkSafety.ForeColor = Color.LightGray;
-                ChkRunway.ForeColor = Color.LightGray;
-                ChkFieldOfView.ForeColor = Color.LightGray;
+                ChkWeather.ForeColor = Color.DarkSeaGreen;
+                ChkSafety.ForeColor = Color.DarkSeaGreen;
+                ChkRunway.ForeColor = Color.DarkSeaGreen;
+                ChkFieldOfView.ForeColor = Color.DarkSeaGreen;
                 MessageBox.Show("Security steps are complete !");
             }
             else
