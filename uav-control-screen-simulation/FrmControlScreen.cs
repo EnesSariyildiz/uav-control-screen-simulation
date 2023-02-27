@@ -148,9 +148,30 @@ namespace uav_control_screen_simulation
             TxtFuel.Text = fuelCount.ToString();
         }
 
-        private void TimerAltitude_Tick(object sender, EventArgs e)
+
+        int altitiudeCount;
+        private void BtnAltitudePlus_Click(object sender, EventArgs e)
         {
-            TimerAltitude.Start();
+
+            altitiudeCount += 5;
+            if (altitiudeCount > 60)
+            {
+                altitiudeCount = 60;
+                MessageBox.Show("Limit reached!");
+            }
+            TxtAltitude.Text = altitiudeCount.ToString();
+        }
+
+        private void BtnAltitudeMinus_Click(object sender, EventArgs e)
+        {
+            altitiudeCount -= 5;
+            if (altitiudeCount < -40)
+            {
+                altitiudeCount = -40;
+                MessageBox.Show("Limit reached!");
+            }
+            TxtAltitude.Text = altitiudeCount.ToString();
+
         }
 
         private void BtnConfirm_Click(object sender, EventArgs e)

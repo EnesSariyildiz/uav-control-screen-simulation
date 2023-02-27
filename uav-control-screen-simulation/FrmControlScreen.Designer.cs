@@ -39,9 +39,9 @@
             this.button11 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnAltitudePlus = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnAltitudeMinus = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -75,7 +75,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtRpm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.TxtAltitude = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -93,7 +93,6 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
-            this.TimerAltitude = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -127,9 +126,9 @@
             this.groupBox8.Controls.Add(this.button11);
             this.groupBox8.Controls.Add(this.label14);
             this.groupBox8.Controls.Add(this.label12);
-            this.groupBox8.Controls.Add(this.button7);
+            this.groupBox8.Controls.Add(this.BtnAltitudePlus);
             this.groupBox8.Controls.Add(this.button8);
-            this.groupBox8.Controls.Add(this.button6);
+            this.groupBox8.Controls.Add(this.BtnAltitudeMinus);
             this.groupBox8.Controls.Add(this.button9);
             this.groupBox8.Controls.Add(this.label13);
             this.groupBox8.Location = new System.Drawing.Point(9, 227);
@@ -208,15 +207,16 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "Altitude : ";
             // 
-            // button7
+            // BtnAltitudePlus
             // 
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(186, 63);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 32);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnAltitudePlus.ForeColor = System.Drawing.Color.Black;
+            this.BtnAltitudePlus.Location = new System.Drawing.Point(186, 63);
+            this.BtnAltitudePlus.Name = "BtnAltitudePlus";
+            this.BtnAltitudePlus.Size = new System.Drawing.Size(64, 32);
+            this.BtnAltitudePlus.TabIndex = 5;
+            this.BtnAltitudePlus.Text = "+";
+            this.BtnAltitudePlus.UseVisualStyleBackColor = true;
+            this.BtnAltitudePlus.Click += new System.EventHandler(this.BtnAltitudePlus_Click);
             // 
             // button8
             // 
@@ -228,15 +228,16 @@
             this.button8.Text = "-";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BtnAltitudeMinus
             // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(116, 62);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(64, 32);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnAltitudeMinus.ForeColor = System.Drawing.Color.Black;
+            this.BtnAltitudeMinus.Location = new System.Drawing.Point(116, 62);
+            this.BtnAltitudeMinus.Name = "BtnAltitudeMinus";
+            this.BtnAltitudeMinus.Size = new System.Drawing.Size(64, 32);
+            this.BtnAltitudeMinus.TabIndex = 6;
+            this.BtnAltitudeMinus.Text = "-";
+            this.BtnAltitudeMinus.UseVisualStyleBackColor = true;
+            this.BtnAltitudeMinus.Click += new System.EventHandler(this.BtnAltitudeMinus_Click);
             // 
             // button9
             // 
@@ -571,14 +572,14 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Rpm :";
             // 
-            // textBox8
+            // TxtAltitude
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(470, 22);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 26);
-            this.textBox8.TabIndex = 9;
+            this.TxtAltitude.Enabled = false;
+            this.TxtAltitude.Location = new System.Drawing.Point(470, 22);
+            this.TxtAltitude.Name = "TxtAltitude";
+            this.TxtAltitude.ReadOnly = true;
+            this.TxtAltitude.Size = new System.Drawing.Size(100, 26);
+            this.TxtAltitude.TabIndex = 9;
             // 
             // label8
             // 
@@ -601,7 +602,7 @@
             this.groupBox5.Controls.Add(this.TxtSpeed);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.Controls.Add(this.TxtAltitude);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.Controls.Add(this.TxtFuel);
@@ -731,10 +732,6 @@
             // 
             this.TimerFlightTime.Tick += new System.EventHandler(this.TimerFlightTime_Tick);
             // 
-            // TimerAltitude
-            // 
-            this.TimerAltitude.Tick += new System.EventHandler(this.TimerAltitude_Tick);
-            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -789,7 +786,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtRpm;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox TxtAltitude;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtFuel;
         private System.Windows.Forms.Label label4;
@@ -812,8 +809,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnAltitudeMinus;
+        private System.Windows.Forms.Button BtnAltitudePlus;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox ChkWeather;
         private System.Windows.Forms.CheckBox ChkFieldOfView;
@@ -843,7 +840,6 @@
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer TimerFlightTime;
-        private System.Windows.Forms.Timer TimerAltitude;
     }
 }
 
