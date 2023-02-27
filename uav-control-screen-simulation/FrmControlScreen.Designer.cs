@@ -93,6 +93,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
+            this.TimerAltitude = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -730,6 +731,10 @@
             // 
             this.TimerFlightTime.Tick += new System.EventHandler(this.TimerFlightTime_Tick);
             // 
+            // TimerAltitude
+            // 
+            this.TimerAltitude.Tick += new System.EventHandler(this.TimerAltitude_Tick);
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -838,6 +843,7 @@
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer TimerFlightTime;
+        private System.Windows.Forms.Timer TimerAltitude;
     }
 }
 

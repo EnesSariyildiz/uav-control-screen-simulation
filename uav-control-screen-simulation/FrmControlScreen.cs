@@ -148,6 +148,11 @@ namespace uav_control_screen_simulation
             TxtFuel.Text = fuelCount.ToString();
         }
 
+        private void TimerAltitude_Tick(object sender, EventArgs e)
+        {
+            TimerAltitude.Start();
+        }
+
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
             if (ChkFieldOfView.Checked && ChkRunway.Checked && ChkSafety.Checked && ChkWeather.Checked)
