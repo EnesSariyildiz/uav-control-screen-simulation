@@ -87,7 +87,7 @@ namespace uav_control_screen_simulation
         private void BtnFlight_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Take off beggins");
+            //MessageBox.Show("Take off beggins");
             flightTimeCount++;
             TxtFlightTime.Text = flightTimeCount.ToString();
             timer3.Start();
