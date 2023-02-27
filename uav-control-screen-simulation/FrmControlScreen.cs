@@ -159,7 +159,7 @@ namespace uav_control_screen_simulation
                 altitiudeCount = 60;
                 MessageBox.Show("Limit reached!");
             }
-            TxtAltitude.Text = altitiudeCount.ToString();
+            TxtAltitude.Text = altitiudeCount.ToString() + " " + "ft";
         }
 
         private void BtnAltitudeMinus_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace uav_control_screen_simulation
                 altitiudeCount = -40;
                 MessageBox.Show("Limit reached!");
             }
-            TxtAltitude.Text = altitiudeCount.ToString();
+            TxtAltitude.Text = altitiudeCount.ToString() + " " + "ft";
 
         }
 
