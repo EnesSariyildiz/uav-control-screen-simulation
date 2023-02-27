@@ -26,7 +26,7 @@ namespace uav_control_screen_simulation
         {
 
         }
-        int count, engineCount, fuelCount,rpmCount;
+        int count, engineCount, fuelCount, rpmCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
             TimerRPM.Start();
@@ -73,7 +73,7 @@ namespace uav_control_screen_simulation
             {
                 progressBar1.Value = 0;
                 TxtEngineStop.Text = "Engine is stoped!";
-                
+
             }
             else if (result == DialogResult.No)
             {
@@ -160,15 +160,21 @@ namespace uav_control_screen_simulation
             if (bankAngleCount > 60)
             {
                 bankAngleCount = 60;
-               
+
             }
             TxtBankAngle.Text = bankAngleCount.ToString();
+        }
+
+        private void BtnCoordinatesConfirm_Click(object sender, EventArgs e)
+        {
+            TxtLatitude.Text = TxtXCoordinates.Text;
+            TxtLongtude.Text = TxtYCoordinates.Text;
         }
 
         private void TimerRPM_Tick(object sender, EventArgs e)
         {
             TimerRPM.Start();
-            
+
         }
 
         private void BtnAltitudeMinus_Click(object sender, EventArgs e)
@@ -179,7 +185,7 @@ namespace uav_control_screen_simulation
             if (bankAngleCount < -40)
             {
                 bankAngleCount = -40;
-                
+
             }
             TxtBankAngle.Text = bankAngleCount.ToString() + " " + "ft";
 

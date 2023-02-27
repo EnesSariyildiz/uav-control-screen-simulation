@@ -64,8 +64,8 @@
             this.BtnAutomaticTake = new System.Windows.Forms.Button();
             this.BtnAutomaticLanding = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtLatitude = new System.Windows.Forms.TextBox();
+            this.TxtLongtude = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtSpeed = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,10 +78,12 @@
             this.TxtAltitude = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.TxtBankAngle = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TxtYCoordinates = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.TxtXCoordinates = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -93,9 +95,8 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
-            this.TxtBankAngle = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.TimerRPM = new System.Windows.Forms.Timer(this.components);
+            this.BtnCoordinatesConfirm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -475,23 +476,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "latitude :";
             // 
-            // textBox1
+            // TxtLatitude
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(98, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 1;
+            this.TxtLatitude.Enabled = false;
+            this.TxtLatitude.Location = new System.Drawing.Point(98, 22);
+            this.TxtLatitude.Name = "TxtLatitude";
+            this.TxtLatitude.ReadOnly = true;
+            this.TxtLatitude.Size = new System.Drawing.Size(100, 26);
+            this.TxtLatitude.TabIndex = 1;
             // 
-            // textBox2
+            // TxtLongtude
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(98, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 3;
+            this.TxtLongtude.Enabled = false;
+            this.TxtLongtude.Location = new System.Drawing.Point(98, 57);
+            this.TxtLongtude.Name = "TxtLongtude";
+            this.TxtLongtude.ReadOnly = true;
+            this.TxtLongtude.Size = new System.Drawing.Size(100, 26);
+            this.TxtLongtude.TabIndex = 3;
             // 
             // label2
             // 
@@ -597,11 +598,11 @@
             // 
             this.groupBox5.Controls.Add(this.TxtBankAngle);
             this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.TxtLatitude);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.TxtFlightTime);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.TxtLongtude);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.TxtRpm);
             this.groupBox5.Controls.Add(this.TxtSpeed);
@@ -618,11 +619,30 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Flight Indicators";
             // 
+            // TxtBankAngle
+            // 
+            this.TxtBankAngle.Enabled = false;
+            this.TxtBankAngle.Location = new System.Drawing.Point(686, 22);
+            this.TxtBankAngle.Name = "TxtBankAngle";
+            this.TxtBankAngle.ReadOnly = true;
+            this.TxtBankAngle.Size = new System.Drawing.Size(100, 26);
+            this.TxtBankAngle.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(581, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Bank Angle :";
+            // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox12);
+            this.groupBox6.Controls.Add(this.BtnCoordinatesConfirm);
+            this.groupBox6.Controls.Add(this.TxtYCoordinates);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.TxtXCoordinates);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Location = new System.Drawing.Point(303, 587);
             this.groupBox6.Name = "groupBox6";
@@ -631,35 +651,33 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Coordinates";
             // 
-            // textBox12
+            // TxtYCoordinates
             // 
-            this.textBox12.Location = new System.Drawing.Point(265, 29);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(198, 26);
-            this.textBox12.TabIndex = 23;
+            this.TxtYCoordinates.Location = new System.Drawing.Point(265, 20);
+            this.TxtYCoordinates.Name = "TxtYCoordinates";
+            this.TxtYCoordinates.Size = new System.Drawing.Size(198, 26);
+            this.TxtYCoordinates.TabIndex = 23;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(238, 31);
+            this.label16.Location = new System.Drawing.Point(238, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(24, 20);
             this.label16.TabIndex = 22;
             this.label16.Text = "y :";
             // 
-            // textBox11
+            // TxtXCoordinates
             // 
-            this.textBox11.Location = new System.Drawing.Point(31, 30);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(201, 26);
-            this.textBox11.TabIndex = 21;
+            this.TxtXCoordinates.Location = new System.Drawing.Point(31, 21);
+            this.TxtXCoordinates.Name = "TxtXCoordinates";
+            this.TxtXCoordinates.Size = new System.Drawing.Size(201, 26);
+            this.TxtXCoordinates.TabIndex = 21;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 32);
+            this.label15.Location = new System.Drawing.Point(6, 24);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(24, 20);
             this.label15.TabIndex = 20;
@@ -737,27 +755,21 @@
             // 
             this.TimerFlightTime.Tick += new System.EventHandler(this.TimerFlightTime_Tick);
             // 
-            // TxtBankAngle
-            // 
-            this.TxtBankAngle.Enabled = false;
-            this.TxtBankAngle.Location = new System.Drawing.Point(686, 22);
-            this.TxtBankAngle.Name = "TxtBankAngle";
-            this.TxtBankAngle.ReadOnly = true;
-            this.TxtBankAngle.Size = new System.Drawing.Size(100, 26);
-            this.TxtBankAngle.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(581, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Bank Angle :";
-            // 
             // TimerRPM
             // 
             this.TimerRPM.Tick += new System.EventHandler(this.TimerRPM_Tick);
+            // 
+            // BtnCoordinatesConfirm
+            // 
+            this.BtnCoordinatesConfirm.BackColor = System.Drawing.Color.SeaGreen;
+            this.BtnCoordinatesConfirm.ForeColor = System.Drawing.Color.Black;
+            this.BtnCoordinatesConfirm.Location = new System.Drawing.Point(265, 50);
+            this.BtnCoordinatesConfirm.Name = "BtnCoordinatesConfirm";
+            this.BtnCoordinatesConfirm.Size = new System.Drawing.Size(198, 29);
+            this.BtnCoordinatesConfirm.TabIndex = 24;
+            this.BtnCoordinatesConfirm.Text = "button1";
+            this.BtnCoordinatesConfirm.UseVisualStyleBackColor = false;
+            this.BtnCoordinatesConfirm.Click += new System.EventHandler(this.BtnCoordinatesConfirm_Click);
             // 
             // FrmControlScreen
             // 
@@ -819,9 +831,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtSpeed;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtLongtude;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtLatitude;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button BtnFlight;
@@ -844,9 +856,9 @@
         private System.Windows.Forms.CheckBox ChkRunway;
         private System.Windows.Forms.CheckBox ChkSafety;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtYCoordinates;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox TxtXCoordinates;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button BtnEngineStart;
         private System.Windows.Forms.Button BtnEngineStop;
@@ -870,6 +882,7 @@
         private System.Windows.Forms.TextBox TxtBankAngle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer TimerRPM;
+        private System.Windows.Forms.Button BtnCoordinatesConfirm;
     }
 }
 
