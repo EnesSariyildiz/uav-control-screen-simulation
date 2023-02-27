@@ -93,6 +93,9 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
+            this.TxtBankAngle = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TimerRPM = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -538,7 +541,7 @@
             // TxtFlightTime
             // 
             this.TxtFlightTime.Enabled = false;
-            this.TxtFlightTime.Location = new System.Drawing.Point(657, 22);
+            this.TxtFlightTime.Location = new System.Drawing.Point(686, 57);
             this.TxtFlightTime.Name = "TxtFlightTime";
             this.TxtFlightTime.ReadOnly = true;
             this.TxtFlightTime.Size = new System.Drawing.Size(100, 26);
@@ -548,7 +551,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(597, 25);
+            this.label6.Location = new System.Drawing.Point(626, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 12;
@@ -557,7 +560,7 @@
             // TxtRpm
             // 
             this.TxtRpm.Enabled = false;
-            this.TxtRpm.Location = new System.Drawing.Point(470, 54);
+            this.TxtRpm.Location = new System.Drawing.Point(470, 60);
             this.TxtRpm.Name = "TxtRpm";
             this.TxtRpm.ReadOnly = true;
             this.TxtRpm.Size = new System.Drawing.Size(100, 26);
@@ -566,7 +569,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(412, 57);
+            this.label7.Location = new System.Drawing.Point(412, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 10;
@@ -592,6 +595,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.TxtBankAngle);
+            this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.textBox1);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.TxtFlightTime);
@@ -732,6 +737,28 @@
             // 
             this.TimerFlightTime.Tick += new System.EventHandler(this.TimerFlightTime_Tick);
             // 
+            // TxtBankAngle
+            // 
+            this.TxtBankAngle.Enabled = false;
+            this.TxtBankAngle.Location = new System.Drawing.Point(686, 22);
+            this.TxtBankAngle.Name = "TxtBankAngle";
+            this.TxtBankAngle.ReadOnly = true;
+            this.TxtBankAngle.Size = new System.Drawing.Size(100, 26);
+            this.TxtBankAngle.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(581, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Bank Angle :";
+            // 
+            // TimerRPM
+            // 
+            this.TimerRPM.Tick += new System.EventHandler(this.TimerRPM_Tick);
+            // 
             // FrmControlScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -840,6 +867,9 @@
         private System.Windows.Forms.Button BtnConfirm;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer TimerFlightTime;
+        private System.Windows.Forms.TextBox TxtBankAngle;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer TimerRPM;
     }
 }
 

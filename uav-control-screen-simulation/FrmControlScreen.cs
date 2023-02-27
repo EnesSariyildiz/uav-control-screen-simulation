@@ -26,9 +26,11 @@ namespace uav_control_screen_simulation
         {
 
         }
-        int count, engineCount, fuelCount;
+        int count, engineCount, fuelCount,rpmCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
         {
+            TimerRPM.Start();
+            TxtRpm.Text = rpmCount.ToString();
 
             timer4.Start();
 
@@ -63,15 +65,15 @@ namespace uav_control_screen_simulation
 
         private void BtnEngineStop_Click(object sender, EventArgs e)
         {
-            progressBar1.Value = 0;
+            //progressBar1.Value = 0;
 
             DialogResult result = MessageBox.Show("Stop the engine?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-
-                TxtEngineStop.Text = "Engine is stoped!";
                 progressBar1.Value = 0;
+                TxtEngineStop.Text = "Engine is stoped!";
+                
             }
             else if (result == DialogResult.No)
             {
@@ -149,28 +151,37 @@ namespace uav_control_screen_simulation
         }
 
 
-        int altitiudeCount;
+        int altitiudeCount, bankAngleCount;
         private void BtnAltitudePlus_Click(object sender, EventArgs e)
         {
-
             altitiudeCount += 5;
-            if (altitiudeCount > 60)
-            {
-                altitiudeCount = 60;
-                MessageBox.Show("Limit reached!");
-            }
             TxtAltitude.Text = altitiudeCount.ToString() + " " + "ft";
+            bankAngleCount += 5;
+            if (bankAngleCount > 60)
+            {
+                bankAngleCount = 60;
+               
+            }
+            TxtBankAngle.Text = bankAngleCount.ToString();
+        }
+
+        private void TimerRPM_Tick(object sender, EventArgs e)
+        {
+            TimerRPM.Start();
+            
         }
 
         private void BtnAltitudeMinus_Click(object sender, EventArgs e)
         {
             altitiudeCount -= 5;
-            if (altitiudeCount < -40)
+            TxtAltitude.Text = altitiudeCount.ToString();
+            bankAngleCount -= 5;
+            if (bankAngleCount < -40)
             {
-                altitiudeCount = -40;
-                MessageBox.Show("Limit reached!");
+                bankAngleCount = -40;
+                
             }
-            TxtAltitude.Text = altitiudeCount.ToString() + " " + "ft";
+            TxtBankAngle.Text = bankAngleCount.ToString() + " " + "ft";
 
         }
 
