@@ -180,14 +180,14 @@ namespace uav_control_screen_simulation
         private void BtnAltitudeMinus_Click(object sender, EventArgs e)
         {
             altitiudeCount -= 5;
-            TxtAltitude.Text = altitiudeCount.ToString();
+            TxtAltitude.Text = altitiudeCount.ToString() + " " + "ft";
             bankAngleCount -= 5;
             if (bankAngleCount < -40)
             {
                 bankAngleCount = -40;
 
             }
-            TxtBankAngle.Text = bankAngleCount.ToString() + " " + "ft";
+            TxtBankAngle.Text = bankAngleCount.ToString();
 
         }
 
