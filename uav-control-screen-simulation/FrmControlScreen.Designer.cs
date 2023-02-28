@@ -98,10 +98,10 @@
             this.TimerFlightTime = new System.Windows.Forms.Timer(this.components);
             this.TimerRPM = new System.Windows.Forms.Timer(this.components);
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtCoordinatesX = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtCoordinatesY = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -779,9 +779,9 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.label11);
-            this.groupBox10.Controls.Add(this.textBox2);
+            this.groupBox10.Controls.Add(this.TxtCoordinatesY);
             this.groupBox10.Controls.Add(this.label10);
-            this.groupBox10.Controls.Add(this.textBox1);
+            this.groupBox10.Controls.Add(this.TxtCoordinatesX);
             this.groupBox10.Location = new System.Drawing.Point(12, 447);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(284, 173);
@@ -789,14 +789,15 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Coordinates";
             // 
-            // textBox1
+            // TxtCoordinatesX
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(22, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(238, 30);
-            this.textBox1.TabIndex = 0;
+            this.TxtCoordinatesX.Enabled = false;
+            this.TxtCoordinatesX.Location = new System.Drawing.Point(22, 49);
+            this.TxtCoordinatesX.Name = "TxtCoordinatesX";
+            this.TxtCoordinatesX.ReadOnly = true;
+            this.TxtCoordinatesX.Size = new System.Drawing.Size(238, 30);
+            this.TxtCoordinatesX.TabIndex = 0;
+            this.TxtCoordinatesX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -816,14 +817,15 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "y";
             // 
-            // textBox2
+            // TxtCoordinatesY
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(22, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(238, 30);
-            this.textBox2.TabIndex = 2;
+            this.TxtCoordinatesY.Enabled = false;
+            this.TxtCoordinatesY.Location = new System.Drawing.Point(22, 117);
+            this.TxtCoordinatesY.Name = "TxtCoordinatesY";
+            this.TxtCoordinatesY.ReadOnly = true;
+            this.TxtCoordinatesY.Size = new System.Drawing.Size(238, 30);
+            this.TxtCoordinatesY.TabIndex = 2;
+            this.TxtCoordinatesY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmControlScreen
             // 
@@ -943,9 +945,9 @@
         private System.Windows.Forms.Button BtnCoordinatesConfirm;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtCoordinatesY;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtCoordinatesX;
     }
 }
 

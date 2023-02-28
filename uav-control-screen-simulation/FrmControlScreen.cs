@@ -24,7 +24,7 @@ namespace uav_control_screen_simulation
 
         private void FrmControlScreen_Load(object sender, EventArgs e)
         {
-
+            
         }
         int count, engineCount, fuelCount, rpmCount;
         private void BtnEngineStart_Click(object sender, EventArgs e)
@@ -80,6 +80,10 @@ namespace uav_control_screen_simulation
 
                 TxtEngineStop.Text = "Engine is not stoped!";
             }
+            TxtEngineLeft.Text = "%" + 0;
+            TxtEngineRight.Text = "%" + 0;
+            LblEngineYüzde.Text = "%" + 0;
+
 
 
         }
@@ -125,7 +129,7 @@ namespace uav_control_screen_simulation
         private void BtnSpeedMinus_Click(object sender, EventArgs e)
         {
             speedPlusCount -= 2;
-            TxtSpeed.Text = speedPlusCount.ToString();
+            TxtSpeed.Text = speedPlusCount.ToString() + " " + "knot";
         }
 
         private void TxtFlightTime_TextChanged(object sender, EventArgs e)
@@ -167,8 +171,8 @@ namespace uav_control_screen_simulation
 
         private void BtnCoordinatesConfirm_Click(object sender, EventArgs e)
         {
-            TxtLatitude.Text = TxtXCoordinates.Text;
-            TxtLongtude.Text = TxtYCoordinates.Text;
+            TxtCoordinatesX.Text = TxtXCoordinates.Text;
+            TxtCoordinatesY.Text = TxtYCoordinates.Text;
         }
 
         private void TimerRPM_Tick(object sender, EventArgs e)
